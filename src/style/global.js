@@ -2,7 +2,7 @@ import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 
 const colors = {
-  primary: "mediumseagreen",
+  primary: "#40C297",
   orange: "orange",
 };
 const fonts = {
