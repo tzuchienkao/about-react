@@ -24,6 +24,9 @@ nav {
 #root {
   height: inherit;
 }
+#body {
+  background-color: #f6f6f6;
+}
 #landing {
   color: #fff;
   background-color: #40C297;

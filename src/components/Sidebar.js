@@ -14,7 +14,7 @@ const Sidebar = () => {
         menu.map((route, idx) => {
           const { path, label } = route;
           return (
-              <StyleNavLink key={idx} activeclassname='active' to={path}>{label}</StyleNavLink>
+            <StyleNavLink key={idx} activeclassname='active' to={path}>{label}</StyleNavLink>
           )
         })
       }

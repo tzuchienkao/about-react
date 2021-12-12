@@ -13,7 +13,7 @@ const StyleLayout = styled.div
 
 const Main = ({ children }) => {
   const body = document.getElementsByTagName('body')[0]
-  body.removeAttribute('id')
+  body.setAttribute('id', 'body')
   return (
     <StyleLayout className="wrapper">
       <Sidebar />
