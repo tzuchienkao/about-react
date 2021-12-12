@@ -5,9 +5,11 @@ const StyleCard = {
   title: styled.h6`
     font-size: ${fonts.h6};
     font-wieght: bold;
+    margin: 0;
   `,
   content: styled.p`
     font-size: ${fonts.p};
+    margin: 0;
   `,
 }
 const StyleTitle = StyleCard.title;

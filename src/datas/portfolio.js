@@ -1,7 +1,8 @@
 const portfolio =  {
   "co": {
-    "title": "o",
+    "title": "TaxBI",
     "content": "ooo",
+    "cover": "img/about.jpg",
     "collection": [
       {
         type: 'i',
@@ -15,8 +16,30 @@ const portfolio =  {
     ],
   },
   "coo": {
-    "title": "p",
+    "title": "QTCOMM 中控管理後台",
     "content": "ppp",
+    "cover": "img/about.jpg",
+    "collection": [
+    ],
+  },
+  "co1o": {
+    "title": "QTCOMM 中控管理後台",
+    "content": "ppp",
+    "cover": "",
+    "collection": [
+    ],
+  },
+  "coo2": {
+    "title": "QTCOMM 中控管理後台",
+    "content": "ppp",
+    "cover": "",
+    "collection": [
+    ],
+  },
+  "co1o3": {
+    "title": "QTCOMM 中控管理後台",
+    "content": "ppp",
+    "cover": "",
     "collection": [
     ],
   }

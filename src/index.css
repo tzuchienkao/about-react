@@ -12,6 +12,15 @@ body {
 a {
   text-decoration: none;
 }
+nav {
+  background-color: #40C297;
+  padding-top: 20px;
+  padding-left: 40px;
+  display: grid;
+  gap: 20px;
+  grid-auto-rows: minmax(min-content, max-content);
+  box-sizing: border-box;
+}
 #root {
   height: inherit;
 }
@@ -19,7 +28,8 @@ a {
   color: #fff;
   background-color: #40C297;
 }
-#landing a {
+#landing a,
+nav a {
   color: #fff;
 }
 .rotate {

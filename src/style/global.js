@@ -14,12 +14,13 @@ const fonts = {
 
 const StyleNavLink = styled(NavLink)
 `
-  font-size: ${fonts.p};
-  color: ${colors.primary};
+  font-size: ${fonts.h6};
+  line-height: 2.4;
 
   &.active {
     font-weight: bold;
-    color: ${colors.orange};
+    border-right: 10px solid #fff;
+    
   }
 `;
 

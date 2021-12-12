@@ -33,7 +33,7 @@ const Landing = () => {
       </StylePageSection>
       <div className="absolute">
         <div className="photo">
-          <img src="img/about.jpg" />
+          <img src="img/about.jpg" alt="" />
         </div>
         <b>Agnes Kao</b>
       </div>
@@ -56,11 +56,10 @@ const PageLinks = () => {
           route.content = 'Bachelor Degree of NFU\nMultimedia Desgin';
           break;
         case 'portfolio':
-          route.title = 'Frontend Engineer'
           route.content = 'HTML, CSS, Javascript, Vue.js, Vue-cli, Nuxt.js, GIT, ESLint, Postman';
           break;
         default:
-          route.content = 'HiHi';
+          route.content = '';
           break;
       }
       return route;

@@ -22,7 +22,7 @@ const routes = [
     path: '/portfolio',
     component: Portfolio,
     layout: Main,
-    label: 'Frontend',
+    label: 'Frontend Engineer',
     childern: [
       {
         path: ':type',
