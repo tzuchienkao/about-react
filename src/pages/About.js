@@ -17,7 +17,7 @@ const StyleSection = styled.section
 const About = () => {
   return (
     <StyleSection>
-      <img src="img/about.jpg" alt="" />
+      <img src="/img/about.jpg" alt="" />
       <div></div>
       {
         Object.keys(about).map((data, idx) => {

@@ -33,7 +33,7 @@ const Landing = () => {
       </StylePageSection>
       <div className="absolute">
         <div className="photo">
-          <img src="img/about.jpg" alt="" />
+          <img src="/img/about.jpg" alt="" />
         </div>
         <b>Agnes Kao</b>
       </div>
