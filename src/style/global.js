@@ -6,7 +6,7 @@ const colors = {
   orange: "orange",
 };
 const fonts = {
-  xxl: "6.25rem", // 100px
+  xxl: "5rem", // 80px
   h6: "1.25rem", // 20px
   p: "1.125rem", // 18px
   span: "0.9375rem", // 15px

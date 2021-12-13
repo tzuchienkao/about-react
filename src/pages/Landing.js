@@ -1,30 +1,23 @@
 import { Link, useLocation } from "react-router-dom";
 import routes from '../router/routes';
 import LinkCard from '../components/LinkCard';
-import styled from "styled-components";
-
-const StyleRSection = styled.div
-`
-  color: #222;
-  background: #fff;
-`
 
 const Landing = () => {
   return (
     <>
-      <div className="wrapper">
-        <div className="left-section">
+      <div className="wrapper relative">
+        <div className="wrapper__left">
           <PageLinks />
         </div>
-        <StyleRSection className="right-section">
-          <div className="rotate">
+        <div className="wrapper__right">
+          <div>
             <b>Frontend Engineer</b>
             <p>oyan114@hotmail.com</p>
           </div>
-        </StyleRSection>
+        </div>
       </div>
-      <div className="absolute">
-        <div className="photo">
+      <div className="keyvisual">
+        <div className="keyvisual__photo">
           <img src="/img/about.jpg" alt="" />
         </div>
         <b>Agnes Kao</b>

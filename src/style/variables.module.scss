@@ -1,7 +1,52 @@
 $primary: #40C297;
 $dark: #222;
+$light: #f6f6f6;
+$white: #fff;
+
+$xxl: 5rem; // 80px
+$h6: 1.25rem; // 20px
+$p: 1.125rem; // 18px
+$span: 0.9375rem; // 15px
+
+$vw-context: 1440;
+$fontDefaultsize: 1;
+
+@function space-size($size) {
+  // base on width: 1440
+  $result: calc(($size) / $vw-context) * 1vw;
+  @if $result < 1 {
+    @return 1px;
+  }
+  @return $result;
+}
+@function font-size($size: $fontDefaultsize, $vw: $vw-context) {
+  // TODO: RWD font
+  // base on width: 1440
+  $result: calc(($size) / $vw);
+  @if $result < 12 {
+    @if (($size * 1px) == $xxl) {
+      @if ($result < calc(($xxl) / $vw)) {
+        @return $xxl * 1px;
+      }
+      @return 18px;
+    } @else if (($size * 1px) == $h6) {
+      @return 15px;
+    } @else if (($size * 1px) == $p) {
+      @return 14px;
+    } @else {
+      @return 12px;
+    }
+  } @else {
+    @return $result;
+  }
+}
 
 :export {
   primary: $primary;
   dark: $dark;
+  light: $light;
+  white: $white;
+  fontH6: $h6;
+  fontDefaultSize: $fontDefaultsize;
+  fontResize: font-size($fontDefaultsize);
 }
