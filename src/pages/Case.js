@@ -25,11 +25,11 @@ const StyleWrapperLayout = styled.div
   }
   .right-wrapper {
     display: grid;
+    gap: 20px;
     justify-content: space-between;
-    grid-template-rows: 0.7fr 0.3fr;
-    > div:last-child {
-      padding-top: 20px;
-      border-top: 3px solid #40C297;
+    grid-template-rows: 1fr 0.4fr;
+    > div:first-child {
+      border-bottom: 3px solid #40C297;
     }
   }
 `
