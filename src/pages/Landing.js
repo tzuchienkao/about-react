@@ -3,14 +3,6 @@ import routes from '../router/routes';
 import LinkCard from '../components/LinkCard';
 import styled from "styled-components";
 
-const StylePageSection = styled.div
-`
-  height: inherit;
-  display: grid;
-  grid-auto-columns: 0.9fr 0.3fr;
-  grid-auto-flow: column;
-  gap: 20px;
-`;
 const StyleRSection = styled.div
 `
   color: #222;
@@ -20,7 +12,7 @@ const StyleRSection = styled.div
 const Landing = () => {
   return (
     <>
-      <StylePageSection className="wrapper">
+      <div className="wrapper">
         <div className="left-section">
           <PageLinks />
         </div>
@@ -30,7 +22,7 @@ const Landing = () => {
             <p>oyan114@hotmail.com</p>
           </div>
         </StyleRSection>
-      </StylePageSection>
+      </div>
       <div className="absolute">
         <div className="photo">
           <img src="/img/about.jpg" alt="" />
