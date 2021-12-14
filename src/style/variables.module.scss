@@ -3,45 +3,34 @@ $dark: #222;
 $light: #f6f6f6;
 $white: #fff;
 
-$xxl: 5rem; // 80px
-$h6: 1.25rem; // 20px
-$p: 1.125rem; // 18px
-$span: 0.9375rem; // 15px
+$xxl: 80;
+$h6: 20;
+$p: 18;
+$span: 15;
 
+// base on width: 1440
 $vw-context: 1440;
-$fontDefaultsize: 1;
+$fontDefaultsize: 12;
 
-@function space-size($size) {
-  // TODO: RWD
-  @return $size * 1px;
-  // base on width: 1440
-  // $result: calc(($size) / $vw-context) * 1vw;
-  // @if $result < 1 {
-  //   @return 1px;
-  // }
-  // @return $result;
+@function space-size($size, $vw: $vw-context) {
+  $number: calc(($size / $vw) * 10000);
+  @if ($number < 1) { 
+    $number: $number - 1; 
+  } @else { 
+    $number: $number + 1; 
+  } 
+
+  @return calc(round($number) / 100) * 1vw;
 }
-@function font-size($size: $fontDefaultsize, $vw: $vw-context) {
-  // TODO: RWD font
-  @return $size * 1px;
-  // base on width: 1440
-  // $result: calc(($size) / $vw);
-  // @if $result < 12 {
-  //   @if (($size * 1px) == $xxl) {
-  //     @if ($result < calc(($xxl) / $vw)) {
-  //       @return $xxl * 1px;
-  //     }
-  //     @return 18px;
-  //   } @else if (($size * 1px) == $h6) {
-  //     @return 15px;
-  //   } @else if (($size * 1px) == $p) {
-  //     @return 14px;
-  //   } @else {
-  //     @return 12px;
-  //   }
-  // } @else {
-  //   @return $result;
-  // }
+@function font-size($size, $vw: $vw-context) {
+  $number: calc(($size / $vw) * 10000);
+  @if ($number < 1) { 
+    $number: $number - 1; 
+  } @else { 
+    $number: $number + 1; 
+  } 
+
+  @return calc(round($number) / 100) * 1vw;
 }
 
 :export {
@@ -51,5 +40,4 @@ $fontDefaultsize: 1;
   white: $white;
   fontH6: $h6;
   fontDefaultSize: $fontDefaultsize;
-  fontResize: font-size($fontDefaultsize);
 }
