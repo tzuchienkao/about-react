@@ -130,6 +130,11 @@ nav,
   box-sizing: border-box;
   gap: space-size(40);
   grid-template-columns: repeat(2, minmax(0, 1fr));
+  &__sub {
+    @apply grid;
+    padding: space-size(0);
+    gap: space-size(20);
+  }
   &__left {
     @apply h-full grid content-start overflow-y-scroll;
     width: inherit;
@@ -139,9 +144,9 @@ nav,
     }
   }
   &__right {
-    @apply grid justify-between;
+    @apply grid justify-between overflow-y-scroll;
     gap: space-size(20);
-    grid-template-rows: 1fr 0.4fr;
+    grid-template-rows: repeat(2, minmax(0, 1fr));
     .top {
       border-bottom: space-size(3) solid $primary;
     }
@@ -157,13 +162,18 @@ nav,
   }
   ul {
     @apply list-disc list-inside;
+    ul li {
+      @apply list-inside;
+      list-style-type: circle;
+      margin-left: space-size(20);
+    }
   }
 }
 .card {
   width: inherit;
   height: inherit;
   &:hover {
-    box-shadow: 0 5px $primary;
+    box-shadow: 0 space-size(5) $primary;
   }
   a {
     @apply font-bold block;
@@ -174,4 +184,21 @@ nav,
   img {
     width: 100%;
   }
+}
+.tabs {
+  @apply inline-grid grid-flow-col;
+  font-size: $p;
+  gap: space-size(20);
+  li {
+    @apply cursor-pointer;
+    &.is-active {
+      @apply font-bold;
+      box-shadow: 0 space-size(3) $primary;
+    }
+  }
+}
+.info-box {
+  @apply inline-grid;
+  margin-top: space-size(20);
+  gap: space-size(20);
 }

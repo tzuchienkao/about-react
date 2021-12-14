@@ -1,6 +1,33 @@
 const portfolio =  {
-  "co": {
+  "qtc": {
     "title": "QTCOMM 酷堤康科技有限公司",
+    "description": [
+      {
+        content: "帶領新進資淺前端工程師同仁，協助問題排除、技術交流、經驗分享。",
+      },
+      {
+        content: "前端團隊使用：",
+        list: [
+          "UI 套件：Quasar.js, Element-ui, HighChart",
+          "Vue.js 全家餐：透過 Vue Router 路由守衛做到權限控管、透過 Vuex 管理跨組件資料。",
+          "使用  CDD (Component Driven Development)  組件驅動開發法，透過 CLI (Command-Line Interface) 建立 components folder 定義為共用元件庫，藉此達到元件統一化，且不重複開發之目的。",
+          "使用 Jest 進行整合測試，亦使用 Mock Service Worker 撰寫 Mock API。",
+          "資料串接採用  Axios  方法並遵循  RESTful  API  規範。",
+          "遵循  ESLint  Programming  Style  團隊規則，建立易於維護的程式碼。",
+          "仰賴  git  (command  line  /  GUI)  做檔案版本控制。",
+        ],
+      },
+      {
+        content: "跨部門開發方式為：",
+        list: [
+          "與後端透過 Swagger 串接資料。",
+          "悉知  CI  /  CD  流程，透過  Github,  Jira,  Travis CI  完成整合自動化發佈。",
+          "與  APP  團隊合作，透過  deeplink 當中的 schema  協議達到行動裝置打開  APP。",
+          "與  UI  designer  透過  figma  溝通，將統一的設計規範統整為  CSS  共用樣式。",
+          "透過 Jira / Confluence 與 PM, QA 建立階段性任務，藉此可了解各部門同仁彼此的進度，一同開發完成專案。",
+        ],
+      },
+    ],
     "list": [
       {
         content: "TaxBI 印尼稅務系統",
@@ -132,29 +159,18 @@ const portfolio =  {
     ],
   },
   "bb": {
-    "title": "前端工程師 - BB 酷堤康科技有限公司",
+    "title": "PressLogic 台灣邏輯媒體科技",
     "list": [
       {
-        content: "TaxBI 印尼稅務系統",
-      },
-      {
-        content: "CodeCert 證書管理系統",
-      },
-      {
-        content: "各系統中控管理後台維護及開發",
-        list: [
-          "CodeCert 管理介面開發",
-          "TaxBI 各系統管理介面開發",
-          "LuckyDraw 開獎系統管理介面開發",
-        ]
+        content: "BeautyBee 自有社群平台",
       },
     ],
     "collection": [
       {
-        type: 'TaxBI',
-        label: 'TaxBI',
+        type: 'BeautyBee',
+        label: 'BeautyBee',
         cover: 'img/about.jpg',
-        title: '印尼稅務系統 TaxBI (https://taxbi.ecomm-cloud.net/)',
+        title: '社群平台 BeautyBee (https://www.beautybee.com)',
         content: [
           '系統帳號權限控管',
           '圖表資料整合',
@@ -167,11 +183,21 @@ const portfolio =  {
           "img/about.jpg",
         ]
       },
+    ],
+  },
+  "wlj": {
+    "title": "1828集團-王老吉茶館",
+    "list": [
       {
-        type: 'Admin',
-        label: 'QTCOMM 中控管理後台',
+        content: "1828 王老吉涼水舖",
+      },
+    ],
+    "collection": [
+      {
+        type: '1828',
+        label: '1828',
         cover: 'img/about.jpg',
-        title: '印尼稅務系統 TaxBI (https://taxbi.ecomm-cloud.net/)',
+        title: '飲料訂購系統 1828 王老吉涼水舖',
         content: [
           '系統帳號權限控管',
           '圖表資料整合',
@@ -183,7 +209,7 @@ const portfolio =  {
           "img/about.jpg",
           "img/about.jpg",
         ]
-      }
+      },
     ],
   },
 }
