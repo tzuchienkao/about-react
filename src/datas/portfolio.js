@@ -46,9 +46,10 @@ const portfolio =  {
     ],
     "collection": [
       {
-        type: 'TaxBI',
+        type: 'taxbi',
         label: 'TaxBI',
-        cover: 'img/about.jpg',
+        tag: ["PC"],
+        cover: 'cover.jpg',
         title: '印尼稅務系統 TaxBI (https://taxbi.ecomm-cloud.net/)',
         content: [
           '系統帳號權限控管',
@@ -63,10 +64,11 @@ const portfolio =  {
         ]
       },
       {
-        type: 'Admin',
+        type: 'admin',
         label: 'QTCOMM 中控管理後台',
-        cover: 'img/about.jpg',
-        title: '印尼稅務系統 TaxBI (https://taxbi.ecomm-cloud.net/)',
+        tag: ["PC"],
+        cover: 'cover.jpg',
+        title: '中控管理後台',
         content: [
           "CodeCert 管理介面開發：建立/查詢帳號、權限管理、證書數量管理",
           "TaxBI 各系統管理介面開發：建立/查詢帳號、權限管理",
@@ -79,9 +81,10 @@ const portfolio =  {
         ]
       },
       {
-        type: 'CodeCert',
+        type: 'codecert',
         label: 'CodeCert',
-        cover: 'img/about.jpg',
+        tag: ["PC"],
+        cover: 'cover.jpg',
         title: 'CodeCert 證書管理系統 (https://www.code-cert.com/)',
         content: [
           '系統帳號權限控管',
@@ -113,7 +116,8 @@ const portfolio =  {
       {
         type: 'bigbigshop',
         label: 'big big shop',
-        cover: 'img/about.jpg',
+        tag: ["PC", "Tablet", "Mobile"],
+        cover: 'cover.jpg',
         title: '香港電商網站 big big shop (https://www.bigbigshop.com/)',
         content: [
           '維護前台使用者介面',
@@ -128,9 +132,10 @@ const portfolio =  {
         ]
       },
       {
-        type: 'Boutir',
+        type: 'boutir',
         label: 'Boutir 自動化物流',
-        cover: 'img/about.jpg',
+        tag: ["PC", "Tablet", "Mobile"],
+        cover: 'cover.jpg',
         title: 'Boutir 掌舖',
         content: [
           '自動化物流 - 訂單追蹤功能',
@@ -142,9 +147,10 @@ const portfolio =  {
         ]
       },
       {
-        type: 'CLUBTravel',
+        type: 'clubtravel',
         label: 'CLUB Travel',
-        cover: 'img/about.jpg',
+        tag: ["PC", "Tablet", "Mobile"],
+        cover: 'cover.jpg',
         title: 'CLUB Travel',
         content: [
           '搜尋列表 - 切版',
@@ -158,7 +164,7 @@ const portfolio =  {
       },
     ],
   },
-  "bb": {
+  "pl": {
     "title": "PressLogic 台灣邏輯媒體科技",
     "list": [
       {
@@ -167,9 +173,10 @@ const portfolio =  {
     ],
     "collection": [
       {
-        type: 'BeautyBee',
+        type: 'beautybee',
         label: 'BeautyBee',
-        cover: 'img/about.jpg',
+        tag: ["PC", "Tablet", "Mobile"],
+        cover: 'cover.jpg',
         title: '社群平台 BeautyBee (https://www.beautybee.com)',
         content: [
           '系統帳號權限控管',
@@ -194,9 +201,10 @@ const portfolio =  {
     ],
     "collection": [
       {
-        type: '1828',
-        label: '1828',
-        cover: 'img/about.jpg',
+        type: 'wlj',
+        label: '1828 王老吉涼水舖 [Mobile]',
+        tag: ['Mobile'],
+        cover: 'cover.jpg',
         title: '飲料訂購系統 1828 王老吉涼水舖',
         content: [
           '系統帳號權限控管',

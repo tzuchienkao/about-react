@@ -11,7 +11,7 @@ const Card = ({ cardInfo }) => {
           search: `?type=${item.type}`,
         }}
       >
-        <img src={`/${item.cover}` || "/img/about.jpg"} alt={item.title} />
+        <img src={`/img/case/${data}/${item.type}_${item.cover}` || "/img/about.jpg"} alt={item.title} />
         <span>{item.label}</span>
       </Link>
     </div>

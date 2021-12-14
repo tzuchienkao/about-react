@@ -115,14 +115,14 @@ nav,
   }
 }
 .grid-list {
-  @apply grid;
+  @apply h-screen grid overflow-y-scroll;
   width: inherit;
   padding: space-size(40);
   box-sizing: border-box;
   column-gap: space-size(20);
   row-gap: space-size(40);
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  grid-template-rows: minmax(min-content, max-content);
+  grid-template-columns: repeat(auto-fill, minmax(20.833vw, 0.33fr));
+  grid-template-rows: repeat(auto-fill, minmax(15.625vw, 0.25fr));
 }
 .half-section {
   @apply h-screen grid grid-flow-col overflow-hidden;
@@ -171,7 +171,6 @@ nav,
 }
 .card {
   width: inherit;
-  height: inherit;
   &:hover {
     box-shadow: 0 space-size(5) $primary;
   }
@@ -191,14 +190,17 @@ nav,
   gap: space-size(20);
   li {
     @apply cursor-pointer;
+    &:hover,
     &.is-active {
       @apply font-bold;
-      box-shadow: 0 space-size(3) $primary;
+      text-decoration: underline;
+      text-decoration-color:$primary;
+      text-underline-offset: -5px;
+      text-decoration-thickness: 8px;
     }
   }
 }
 .info-box {
   @apply inline-grid;
-  margin-top: space-size(20);
-  gap: space-size(20);
+  gap: space-size(10);
 }
