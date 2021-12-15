@@ -9,7 +9,7 @@ const Main = ({ children }) => {
         <Sidebar />
         <footer>
           <div className='w-8 h-8 flex justify-center rounded-full overflow-hidden'>
-            <img className='max-w-max max-h-full' src="/img/me.jpg" alt="高慈謙 Agnes Kao" />
+            <img className='max-w-max max-h-full' src="https://tzuchienkao.github.io/about-react/img/me.jpg" alt="高慈謙 Agnes Kao" />
           </div>
           <span>oyan114@hotmail.com</span>
         </footer>

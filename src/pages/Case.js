@@ -17,7 +17,7 @@ const Case = ({ collection }) => {
         {
           items.images.map((img, idx) => {
             return (
-              <img key={idx} src={`/${img}` || "/img/about.jpg"} alt={items.title} />
+              <img key={idx} src={img || "https://tzuchienkao.github.io/about-react/img/me.jpg"} alt={items.title} />
             )
           })
         }
