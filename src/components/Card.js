@@ -11,7 +11,7 @@ const Card = ({ cardInfo }) => {
           search: `?type=${item.type}`,
         }}
       >
-        <img src={`/img/case/${data}/${item.type}_${item.cover}` || "/img/me.jpg"} alt={item.title} />
+        <img src={`${item.cover}` || "https://tzuchienkao.github.io/about-react/img/me.jpg"} alt={item.title} />
         <p>{item.label}</p>
         <sub className="tag-list font-normal flex flex-wrap">
         {

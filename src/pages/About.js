@@ -5,7 +5,7 @@ const About = () => {
   return (
     <section id="about">
       <div>
-        <img src="/img/me.jpg" alt="高慈謙 Agnes Kao" />
+        <img src="https://tzuchienkao.github.io/about-react/img/me.jpg" alt="高慈謙 Agnes Kao" />
       </div>
       <div className="bottom">
       {
