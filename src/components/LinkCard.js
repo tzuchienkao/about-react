@@ -3,7 +3,7 @@ const LinkCard = ({title = null, subTitle = null, content}) => {
     <div className="link-card">
       {
         title
-        ? <h6>{title}</h6>
+        ? <h6 className="font-bold">{title}</h6>
         : <></>
       }
       {
@@ -29,7 +29,7 @@ const LinkCard = ({title = null, subTitle = null, content}) => {
                   <li>{list?.content || list}</li>
                 </ul>
             })
-        : <li>{content}</li>
+        : <p>{content}</p>
       }
     </div>
   )

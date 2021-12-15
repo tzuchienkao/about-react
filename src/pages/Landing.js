@@ -18,7 +18,7 @@ const Landing = () => {
       </div>
       <div className="keyvisual">
         <div className="keyvisual__photo">
-          <img src="/img/about.jpg" alt="" />
+          <img src="/img/me.jpg" alt="高慈謙 Agnes Kao" />
         </div>
         <b>Agnes Kao</b>
       </div>

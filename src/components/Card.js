@@ -11,8 +11,17 @@ const Card = ({ cardInfo }) => {
           search: `?type=${item.type}`,
         }}
       >
-        <img src={`/img/case/${data}/${item.type}_${item.cover}` || "/img/about.jpg"} alt={item.title} />
-        <span>{item.label}</span>
+        <img src={`/img/case/${data}/${item.type}_${item.cover}` || "/img/me.jpg"} alt={item.title} />
+        <p>{item.label}</p>
+        <sub className="tag-list font-normal flex flex-wrap">
+        {
+          item.tag.map((tag) => {
+            return (
+              <span key={tag} className="tag">{`#${tag}`}</span>
+            )
+          })
+        }
+        </sub>
       </Link>
     </div>
   )

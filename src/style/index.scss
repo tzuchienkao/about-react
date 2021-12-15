@@ -8,6 +8,7 @@ html, body {
 }
 body {
   font-size: font-size($span);
+  line-height: 1.5;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
@@ -17,14 +18,24 @@ body {
 a {
   text-decoration: none;
 }
-nav {
+.aside {
+  @apply text-white;
   background-color: $primary;
-  padding-top: space-size(40);
-  padding-left: space-size(40);
-  display: grid;
-  gap: space-size(40);
-  grid-auto-rows: minmax(min-content, max-content);
+  padding: space-size(40);
+  padding-right: 0;
+  gap: space-size(20);
   box-sizing: border-box;
+}
+footer {
+  @apply font-bold grid grid-flow-col items-center;
+  font-size: font-size($span);
+  grid-template-columns: max-content;
+  gap: space-size(10);
+}
+nav {
+  @apply grid;
+  gap: space-size(20);
+  grid-auto-rows: minmax(min-content, max-content);
   a {
     font-size: font-size($h6);
     line-height: 2.4;
@@ -53,7 +64,7 @@ nav,
 #body {
   background-color: $light;
   .wrapper {
-    grid-template-columns: 0.3fr 0.9fr;
+    grid-template-columns: 0.25fr 0.75fr;
   }
 }
 #landing {
@@ -114,6 +125,38 @@ nav,
     }
   }
 }
+#about {
+  @apply h-full grid overflow-y-scroll;
+  padding: space-size(40);
+  box-sizing: border-box;
+  img {
+    max-width: calc(50% - space-size(40));
+    box-shadow: 0 5px 15px rgba($dark, 0.1);
+  }
+  .bottom {
+    @apply grid;
+    margin-top: space-size(40);
+    gap: space-size(40);
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas:
+    "b d"
+    "c d";
+  }
+  .link-card {
+    &:not(:last-child) {
+      ul {
+        list-style: none;
+        ul {
+          padding-top: space-size(10);
+          padding-bottom: space-size(10);
+        }
+      }
+    }
+    &:last-child {
+      grid-area: d;
+    }
+  }
+}
 .grid-list {
   @apply h-screen grid overflow-y-scroll;
   width: inherit;
@@ -122,7 +165,6 @@ nav,
   column-gap: space-size(20);
   row-gap: space-size(40);
   grid-template-columns: repeat(auto-fill, minmax(20.833vw, 0.33fr));
-  grid-template-rows: repeat(auto-fill, minmax(15.625vw, 0.25fr));
 }
 .half-section {
   @apply h-screen grid grid-flow-col overflow-hidden;
@@ -130,6 +172,9 @@ nav,
   box-sizing: border-box;
   gap: space-size(40);
   grid-template-columns: repeat(2, minmax(0, 1fr));
+  &.pr-0 {
+    padding-right: 0 !important;
+  }
   &__sub {
     @apply grid;
     padding: space-size(0);
@@ -140,14 +185,20 @@ nav,
     width: inherit;
     gap: space-size(20);
     img {
-      @apply w-full;
+      max-width: 100%;
+      max-height: 50vh;
+      margin: 0 auto;
     }
   }
   &__right {
     @apply grid justify-between overflow-y-scroll;
     gap: space-size(20);
-    grid-template-rows: repeat(2, minmax(0, 1fr));
+    grid-template-columns: 1fr;
+    .top, .bottom {
+      padding-right: space-size(20);
+    }
     .top {
+      padding-bottom: space-size(20);
       border-bottom: space-size(3) solid $primary;
     }
   }
@@ -156,6 +207,7 @@ nav,
 .link-card {
   h6 {
     font-size: font-size($h6);
+    margin-bottom: space-size(20);
   }
   p, li {
     font-size: font-size($p);
@@ -170,7 +222,6 @@ nav,
   }
 }
 .card {
-  width: inherit;
   &:hover {
     box-shadow: 0 space-size(5) $primary;
   }
@@ -182,6 +233,7 @@ nav,
   }
   img {
     width: 100%;
+    box-shadow: 0 5px 15px rgba($dark, 0.15);
   }
 }
 .tabs {
@@ -198,6 +250,16 @@ nav,
       text-underline-offset: -5px;
       text-decoration-thickness: 8px;
     }
+  }
+}
+.tag-list {
+  padding-bottom: 1em;
+  row-gap: space-size(20);
+  .tag {
+    word-wrap: break-word;
+    transform: scale(0.8);
+    transform-origin: top left;
+    display: inline-block;
   }
 }
 .info-box {
