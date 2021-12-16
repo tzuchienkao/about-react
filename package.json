@@ -1,6 +1,6 @@
 {
-  "name": "my-react",
-  "homepage": "https://tzuchienkao.github.io/about-react",
+  "name": "about-react",
+  "homepage": "/about-react/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
