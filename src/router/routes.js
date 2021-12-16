@@ -25,7 +25,7 @@ const routes = [
     label: 'Frontend Engineer',
     childern: [
       {
-        path: ':type',
+        path: ':type/:case',
         component: LinkCard,
       },
     ]

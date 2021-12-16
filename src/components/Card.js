@@ -7,8 +7,7 @@ const Card = ({ cardInfo }) => {
     <div className="card">
       <Link
         to={{
-          pathname: `/portfolio/${data}`,
-          search: `?type=${item.type}`,
+          pathname: `/about-react/portfolio/${data}/${item.type}`,
         }}
       >
         <img src={`${item.cover}` || "https://tzuchienkao.github.io/about-react/img/me.jpg"} alt={item.title} />
