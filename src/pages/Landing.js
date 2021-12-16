@@ -34,7 +34,7 @@ const PageLinks = () => {
     })
     .map((route) => {
       const { label, path } = route;
-      const content = path.replace('/', '')
+      const content = path.replace('/about-react/', '')
       route.title = label;
       switch (content) {
         case 'about':
