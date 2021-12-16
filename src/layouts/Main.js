@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import Sidebar from '../components/Sidebar';
 
 const Main = ({ children }) => {
@@ -8,9 +9,14 @@ const Main = ({ children }) => {
       <div className='aside grid content-between'>
         <Sidebar />
         <footer>
-          <div className='w-8 h-8 flex justify-center rounded-full overflow-hidden'>
+          <Link
+            to={{
+              pathname: `/about-react/`,
+            }}
+            className='w-8 h-8 flex justify-center rounded-full overflow-hidden'
+          >
             <img className='max-w-max max-h-full' src="https://tzuchienkao.github.io/about-react/img/me.jpg" alt="高慈謙 Agnes Kao" />
-          </div>
+          </Link>
           <span>oyan114@hotmail.com</span>
         </footer>
       </div>
