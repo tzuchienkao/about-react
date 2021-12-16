@@ -7,19 +7,19 @@ import LinkCard from '../components/LinkCard';
 
 const routes = [
   {
-    path: '/',
+    path: '/about-react/',
     exact: true,
     component: Landing,
     layout: Home,
   },
   {
-    path: '/about',
+    path: '/about-react/about',
     component: About,
     layout: Main,
     label: 'Agnes Kao',
   },
   {
-    path: '/portfolio',
+    path: '/about-react/portfolio',
     component: Portfolio,
     layout: Main,
     label: 'Frontend Engineer',
@@ -32,7 +32,7 @@ const routes = [
   },
   {
     path: '*',
-    component: () => <Navigate replace to="/" />,
+    component: () => <Navigate replace to="/about-react/" />,
   }
 ];
 

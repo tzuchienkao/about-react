@@ -1,5 +1,6 @@
 {
-  "name": "my-react",
+  "name": "about-react",
+  "homepage": "/about-react/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
