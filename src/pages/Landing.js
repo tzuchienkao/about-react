@@ -28,9 +28,11 @@ const Landing = () => {
 
 const PageLinks = () => {
   const { pathname } = useLocation();
+  const urlPath = pathname.replace(/\//g, '');
   const pageLinks = routes
     .filter((route) => {
-      return route.path !== pathname && route.layout
+      const routePath = route.path.replace(/\//g, '');
+      return routePath !== urlPath && route.layout
     })
     .map((route) => {
       const { label, path } = route;
