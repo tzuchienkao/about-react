@@ -1,11 +1,9 @@
-import { useParams, useSearchParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import portfolio from '../datas/portfolio';
 import LinkCard from '../components/LinkCard';
 
 const Case = ({ collection }) => {
-  const [searchParams] = useSearchParams();
-  const { type: subject } = useParams();
-  const type = searchParams.get('type');
+  const { type: subject, case: type } = useParams();
   const items = collection
     .filter((item) => {
       return item.type === type

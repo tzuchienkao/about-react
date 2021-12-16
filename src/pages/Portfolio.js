@@ -1,12 +1,10 @@
-import { Navigate, useParams, useSearchParams } from 'react-router-dom';
+import { Navigate, useParams } from 'react-router-dom';
 import portfolio from '../datas/portfolio';
 import Case from './Case';
 import Card from '../components/Card';
 
 const Portfolio = () => {
-  const [searchParams] = useSearchParams();
-  const { type: subject } = useParams();
-  const type = searchParams.get('type');
+  const { type: subject, case: type } = useParams();
 
   return (
     <>
