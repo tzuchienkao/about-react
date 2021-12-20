@@ -14,23 +14,12 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  @media screen and (-webkit-min-device-pixel-ratio: 3) {
-    font-size: $span;
-    h6 {
-      font-size: $h6;
-    }
-    p {
-      font-size: $p;
-    }
-    span {
-      font-size: $span;
-    }
-  }
 }
 a {
   text-decoration: none;
 }
 .aside {
+  @apply flex flex-col justify-between;
   color: $light;
   background-color: $primary;
   padding: space-size(40);
@@ -39,7 +28,7 @@ a {
   box-sizing: border-box;
 }
 footer {
-  @apply font-bold grid grid-flow-col items-center;
+  @apply font-bold break-all grid grid-flow-col items-center;
   font-size: font-size($span);
   grid-template-columns: max-content;
   gap: space-size(10);
@@ -49,9 +38,14 @@ nav {
   gap: space-size(20);
   grid-auto-rows: minmax(min-content, max-content);
   a {
+    @apply grid grid-flow-col items-center justify-start;
     font-size: font-size($h6);
     line-height: 2.4;
     border-right: space-size(0) solid $white;
+    gap: space-size(10);
+    span {
+      @apply inline-block truncate;
+    }
     &.active {
       @apply font-bold text-white;
       border-right: space-size(10) solid $white;
@@ -81,7 +75,7 @@ nav,
 #body {
   background-color: $light;
   .wrapper {
-    grid-template-columns: 0.3fr 1fr;
+    grid-template-columns: 30% 1fr;
   }
 }
 #landing {
@@ -305,13 +299,14 @@ nav,
   @apply inline-grid;
   gap: space-size(10);
 }
-@media screen and (max-width: 639px) and (-webkit-min-device-pixel-ratio: 2),
-  screen and (max-width: 639px) and (-webkit-min-device-pixel-ratio: 3) {
+@media screen and (max-width: 639px) {
   body {
     font-size: 4vw;
   }
+  footer {
+    @apply items-start;
+  }
   h6,
-  nav a,
   .link-card h6,
   .card a {
     font-size: 5.333vw;
@@ -321,6 +316,7 @@ nav,
   .link-card li {
     font-size: 4.8vw;
   }
+  nav a,
   span {
     font-size: 4vw;
   }
