@@ -279,7 +279,7 @@ nav,
   a {
     @apply font-bold block;
     color: $dark;
-    font-size: font-size(20);
+    font-size: font-size($h6);
     line-height: 2;
   }
   img {
@@ -304,4 +304,36 @@ nav,
 .info-box {
   @apply inline-grid;
   gap: space-size(10);
+}
+@media screen and (max-width: 639px) and (-webkit-min-device-pixel-ratio: 2),
+  screen and (max-width: 639px) and (-webkit-min-device-pixel-ratio: 3) {
+  body {
+    font-size: 4vw;
+  }
+  h6,
+  nav a,
+  .link-card h6,
+  .card a {
+    font-size: 5.333vw;
+  }
+  p,
+  .link-card p,
+  .link-card li {
+    font-size: 4.8vw;
+  }
+  span {
+    font-size: 4vw;
+  }
+  .half-section {
+    @apply grid-flow-row;
+    grid-template-columns: minmax(min-content, max-content);
+    &__left {
+      height: initial #{!important};
+      img {
+        max-width: 100%;
+        max-height: initial;
+        height: initial;
+      }
+    }
+  }
 }
