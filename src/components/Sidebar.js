@@ -1,4 +1,5 @@
 import { NavLink } from "react-router-dom";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import routes from '../router/routes';
 
 const Sidebar = () => {
@@ -10,9 +11,12 @@ const Sidebar = () => {
     <nav>
       {
         menu.map((route, idx) => {
-          const { path, label } = route;
+          const { path, label, icon } = route;
           return (
-            <NavLink key={idx} activeclassname='active' to={path}>{label}</NavLink>
+            <NavLink key={idx} activeclassname='active' to={path}>
+              <FontAwesomeIcon icon={icon} />
+              <span>{label}</span>
+            </NavLink>
           )
         })
       }

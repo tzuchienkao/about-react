@@ -6,7 +6,7 @@ const Main = ({ children }) => {
   body.setAttribute('id', 'body')
   return (
     <div className="wrapper">
-      <div className='aside grid content-between'>
+      <div className='aside'>
         <Sidebar />
         <footer>
           <Link

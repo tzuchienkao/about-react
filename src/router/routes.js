@@ -1,4 +1,5 @@
 import { Navigate } from 'react-router-dom';
+import { faSmile, faStarOfDavid } from '@fortawesome/free-solid-svg-icons';
 import { Home, Main } from '../layouts';
 import Landing from '../pages/Landing';
 import About from '../pages/About';
@@ -17,12 +18,14 @@ const routes = [
     component: About,
     layout: Main,
     label: 'Agnes Kao',
+    icon: faSmile,
   },
   {
     path: '/about-react/portfolio',
     component: Portfolio,
     layout: Main,
     label: 'Frontend Engineer',
+    icon: faStarOfDavid,
     childern: [
       {
         path: ':type/:case',
