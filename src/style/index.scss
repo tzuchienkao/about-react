@@ -75,7 +75,7 @@ nav,
 #body {
   background-color: $light;
   .wrapper {
-    grid-template-columns: 30% 1fr;
+    grid-template-columns: 0.3fr 1fr;
   }
 }
 #landing {
@@ -192,7 +192,7 @@ nav,
   }
 }
 .grid-list {
-  @apply h-screen grid overflow-y-scroll;
+  @apply h-full grid overflow-y-scroll;
   width: inherit;
   padding: space-size(40);
   box-sizing: border-box;
@@ -305,6 +305,11 @@ nav,
   }
   footer {
     @apply items-start;
+  }
+  #body {
+    .wrapper {
+      grid-template-columns: 30% 1fr;
+    }
   }
   h6,
   .link-card h6,
